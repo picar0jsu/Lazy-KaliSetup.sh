@@ -64,13 +64,8 @@ systemctl enable xrdp --now
 
 # Full upgrade + Headers
 #apt full-upgrade -y
-#apt install -y linux-headers-$(uname -r)
-
-# VMWare
-#curl -L https://www.vmware.com/go/getworkstation-linux > /home/kali/Downloads/vmware.bin
-#file Downloads/vmware.bin
-#chmod +x /home/kali/Downloads/vmware.bin
-#./home/kali/Downloads/vmware.bin
 
 # Reboot
 #reboot
+
+#apt install linux-headers-$(uname -r)
