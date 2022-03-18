@@ -60,7 +60,10 @@ systemctl enable xrdp --now
 /etc/init.d/xrdp start
 
 # Enable nessus on startup
-#systemctl start nessusd
+#systemctl enable nessusd
+
+# Enable Bluetooh
+#systemctl enable bluetooh
 
 # Full upgrade + Headers
 #apt full-upgrade -y
