@@ -38,7 +38,7 @@ bash -c 'echo "socks4 127.0.0.1 1080" >> /etc/proxychains4.conf';sed -i '0,/prox
 
 # Install APT Packages
 echo "(+) Installing APT Packages"
-apt update;apt install bloodhound crackmapexec gnome-terminal python3-pip xrdp thunderbird -y
+apt update;apt install bloodhound crackmapexec gnome-terminal gnome-disks python3-pip xrdp thunderbird -y
 
 # Install GEM Packages
 echo "(+) Installing GEM Packages"
