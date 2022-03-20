@@ -18,6 +18,11 @@ ln -s /mnt/SharedFolder/ /home/kali/Desktop/SharedFolder
 echo "(+) Adding aliases to ZSH"
 echo "source /home/kali/Desktop/SharedFolder/00-Customizations/.bash_aliases" >>/home/kali/.zshrc
 
+# ZSH Powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/kali/powerlevel10k
+echo 'source /home/kali/powerlevel10k/powerlevel10k.zsh-theme' >>/home/kali/.zshrc
+
+
 # Configure Apache
 echo "(+) Configuring Apache Web Server"
 systemctl start apache2;systemctl enable apache2;chmod -R 777 /var/www/html
