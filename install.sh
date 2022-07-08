@@ -34,6 +34,7 @@ echo "[share]
  path = /home/kali/share
  browseable = yes
  read only = no">>/etc/samba/smb.conf
+
 echo -e "kali\nkali" | smbpasswd -a kali
 mkdir /home/kali/share;chmod -R 777 /home/kali/share
 
@@ -50,8 +51,61 @@ echo "(+) Installing GEM Packages"
 gem install evil-winrm
 
 # Install PIP Packages
-#echo "requests">/tmp/requirements.txt
-#pip install -r /tmp/requirements.txt
+echo "Twisted
+txaio
+typing-extensions
+typing-inspect
+tzlocal
+u-msgpack-python
+ufoLib2
+ujson
+unicodecsv
+unicodedata2
+Unidecode
+urllib3
+urwid
+userpath
+uvicorn
+uvloop
+vboxapi
+venusian
+wafw00f
+wapiti3
+watchdog
+wcwidth
+webargs
+webencodings
+WebOb
+websocket-client
+websockets
+websockify
+Werkzeug
+wfuzz
+wget
+wheel
+whois
+wifite
+winacl
+wsaccel
+wsproto
+WTForms
+xcffib
+xdg
+xlrd
+XlsxWriter
+xlutils
+xlwt
+xmltodict
+yara-python
+yarl
+yaswfp
+zc.lockfile
+zipp
+zlib-wrapper
+zope.deprecation
+zope.event
+zope.interface">/tmp/requirements.txt
+pip install -r /tmp/requirements.txt
 
 # VSCode (https://code.visualstudio.com/download)
 
