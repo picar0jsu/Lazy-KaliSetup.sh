@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Configure SMB
+echo "(+) Configuring SMB Shared Folder @ /share"
+echo -e 'kali\nkali' | smbpasswd -a kali
+mkdir /home/kali/share;chmod -R 777 /home/kali/share
+systemctl start smbd;systemctl enable smbd;systemctl start nmbd;systemctl enable nmbd
+echo "[share]
+ path = /home/kali/share
+ browseable = yes
+ read only = no">>/etc/samba/smb.conf
+
 # Mount Shared Folder
 echo "(+) Mounting Shared Folder"
 vmhgfs-fuse .host:/ /mnt/ -o subtype=vmhgfs-fuse,allow_other
@@ -26,17 +36,6 @@ echo 'source /home/kali/powerlevel10k/powerlevel10k.zsh-theme' >>/home/kali/.zsh
 # Configure Apache
 echo "(+) Configuring Apache Web Server"
 systemctl start apache2;systemctl enable apache2;chmod -R 777 /var/www/html
-
-# Configure SMB
-echo "(+) Configuring SMB Shared Folder @ /share"
-systemctl start smbd;systemctl enable smbd;systemctl start nmbd;systemctl enable nmbd
-echo "[share]
- path = /home/kali/share
- browseable = yes
- read only = no">>/etc/samba/smb.conf
-
-echo -e "kali\nkali" | smbpasswd -a kali
-mkdir /home/kali/share;chmod -R 777 /home/kali/share
 
 # Configure Proxychains
 echo "(+) Configuring Proxychains"
