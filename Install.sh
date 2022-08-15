@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# v 1.0
+# Author: Jonah Tan
+# curl -L https://raw.githubusercontent.com/picar0jsu/Install.sh/main/install.sh | sh
+
 # Configure SMB
 echo "(+) Configuring SMB Shared Folder @ /share"
 echo -e 'kali\nkali' | smbpasswd -a kali
