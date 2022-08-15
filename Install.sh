@@ -49,6 +49,7 @@ echo "(+) Installing GEM Packages"
 gem install evil-winrm
 
 # Install PIP Packages
+echo "(+) Installing PIP Packages"
 echo "Twisted
 txaio
 typing-extensions
