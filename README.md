@@ -1,4 +1,4 @@
-# Install.sh
+# Lazy-KaliSetup.sh
 A simple script to allow for quick deployment of fresh Virtual Machines. Performs the following:
 - Configures SMB Shared Folder
 - Mounts VMWare Shared Folder (Adds mount script to Crontab)
@@ -16,5 +16,5 @@ A simple script to allow for quick deployment of fresh Virtual Machines. Perform
 # Usage
 Run the script with the following:
 ```
-curl -L https://raw.githubusercontent.com/picar0jsu/Install.sh/main/install.sh | sh
+curl -L https://raw.githubusercontent.com/picar0jsu/Lazy-KaliSetup.sh/main/run.sh | sh
 ```
