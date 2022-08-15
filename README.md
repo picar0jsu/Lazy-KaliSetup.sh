@@ -1,8 +1,8 @@
 # Install.sh
 A simple script to allow for quick deployment of fresh Virtual Machines. Performs the following:
-- Configure SMB Shared Folder
-- Mount VMWare Shared Folder (Adds mount script to Crontab)
-- Create Symlink on Desktop to VMWare Shared Folder
+- Configures SMB Shared Folder
+- Mounts VMWare Shared Folder (Adds mount script to Crontab)
+- Creates Symlink on Desktop to VMWare Shared Folder
 - Adds aliases to ZSH
 - Adds Powerlevel10k
 - Configures Apache Web Server (World-writable)
