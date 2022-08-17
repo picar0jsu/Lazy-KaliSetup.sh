@@ -2,7 +2,7 @@
 
 # v 1.0
 # Author: Jonah Tan
-# curl -L https://raw.githubusercontent.com/picar0jsu/Lazy-KaliSetup.sh/main/run.sh | sh
+# curl -L https://raw.githubusercontent.com/picar0jsu/Setup.sh/main/run.sh | sh
 
 # Configure SMB
 echo "(+) Configuring SMB Shared Folder @ /share"
